@@ -4,6 +4,7 @@
 module.exports = function(environment) {
   let ENV = {
     modulePrefix: 'nopasaran',
+    podModulePrefix: 'nopasaran/z_modules',
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
@@ -17,12 +18,14 @@ module.exports = function(environment) {
       messagingSenderId: "520384236684"
     },
 
-
-    // if using ember-cli-content-security-policy
     contentSecurityPolicy: {
       'script-src': "'self' 'unsafe-eval' apis.google.com",
       'frame-src': "'self' https://*.firebaseapp.com",
       'connect-src': "'self' wss://*.firebaseio.com https://*.googleapis.com"
+    },
+
+    torii: {
+      sessionServiceName: 'session'
     },
 
     EmberENV: {
@@ -45,7 +48,7 @@ module.exports = function(environment) {
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
-    // ENV.APP.LOG_TRANSITIONS = true;
+    ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
   }

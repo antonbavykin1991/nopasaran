@@ -1,0 +1,13 @@
+{{log visitorSession.isAuthenticated visitorSession.isAdmin visitorSession.vkProfileInfo}}
+
+{{#if visitorSession.isAuthenticated}}
+  <div>{{visitorSession.vkProfileInfo.first_name}} {{visitorSession.vkProfileInfo.last_name}}</div>
+  {{#if visitorSession.isAdmin}}
+    <div>Admin</div>
+  {{else}}
+    <div>just simple user</div>
+  {{/if}}
+{{else}}
+
+{{/if}}
+{{np-index}}

@@ -1,0 +1,12 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+.main-wrapper {
+  width: 795px;
+  margin: 0 auto;
+  min-height: 520px;
+}
+
+@import "pod-styles";
